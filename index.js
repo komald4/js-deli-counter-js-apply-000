@@ -1,35 +1,16 @@
-var katzDeli = [];
-function takeANumber (currentLine, name){
-  var placeInLine = currentLine.length +1;
-  var outputString ="Welcome, " + name. "You are number " + placeInLine + " in line.";
-  currentLine.push(name);
-  return outputString;
+function takeANumber(count,name){
+  count.push(`${name}`);
+  return(`Welcome, ${name}. You are number ${count.length} in line.`);  
 }
 
-function nowServing(currentLine) {
-  var outputString;
-  if (currentLine.length === 0) {
-    outputString = "Theere is nobody waiting to be served!"
+function nowServing(katzDeliLine){
+  let i = 0;
+  while (i < katzDeli.length) {
+    i++;
+  }
+  if (katzDeli.length === 0) {
+    return "There is nobody waiting to be servd!";  
   }
   else {
-    outputString = "Currently serving " + currentLine[0] + ".";
-    currentLine.shift();
+    return (`Currently serving ${katzDeli.shft()}`)
   }
-  return outputString;
-}
-
-  function currentLine (line){
-    var outputString;
-    if (line.length === 0) {
-      outputString ="The line is currently:"
-      for(var i = 0; i < line.length; i++){
-        if(i===0){
-          outputString = outputString + (i+1) + “. ” + line[i];
-          }
-          else{
-          outputString = outputString + “, ” + (i+1) + “. ” + line[i];
-          }
-          }
-          }
-          return outputString;
-          }
